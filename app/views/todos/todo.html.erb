@@ -1,0 +1,25 @@
+<%# <% javascript_include_tag params[:todos] %> %>
+<%# <% stylesheet_link_tag 'todos' %> %>
+<div class="todos">
+<br><br>
+<%= @todo_of_id.to_s %>
+<div id="myDIV" class="header">
+  <h2 ><%= @current_user.last_name %>'s To Do List</h2>
+  <%= link_to "Sign Out" , users_signout_path, method: 'delete', class: "sign-out btn btn-primary"%>
+  <%= form_with(model: @todo,  url: "todos", method: "POST") do |form| %>
+
+      <%= form.text_field :todo_text, id:"myInput",placeholder: "Add a Task..."   %>
+      <%= form.date_field :due_date, id:"myDueDate"  %>
+      <%= form.submit "Add Task", class:"addBtn" %>
+      
+  <% end %>
+</div>
+
+
+<%= render partial: "todo_section",locals: {title: "Overdue",todos: @todos.overdue} %>
+<br>
+<%= render partial: "todo_section",locals: {title: "Due Today",todos: @todos.due_today} %>
+<br>
+<%= render partial: "todo_section",locals: {title: "Due Later",todos: @todos.due_later} %>
+<br>
+</div>

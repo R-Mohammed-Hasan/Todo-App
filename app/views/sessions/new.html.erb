@@ -1,0 +1,19 @@
+
+<h2 class="text-center m-5">Welcome back... ! </h2>
+<%= form_with(model: @user, url: "/users/login",method: "POST",class: "mt-5 text-center ") do |form| %>
+
+
+  <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">E-mail: </label>
+        <%= form.text_field :email, placeholder: 'Enter your E-mail' %>
+  </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password: </label>
+        <%= form.password_field :password , placeholder: 'Enter your Password'%>
+  </div>
+    <div class="mb-3">
+    <%= form.submit :Login,class: "btn btn-primary" %>
+
+  </div>
+
+<% end %>

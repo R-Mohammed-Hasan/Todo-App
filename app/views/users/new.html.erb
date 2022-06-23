@@ -1,0 +1,27 @@
+
+<h2 class="text-center m-5">Welcome New user... ! </h2>
+<%= form_with(model: @user, url: "/users",method: "POST",class: "mt-5 text-center ") do |form| %>
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">First Name: </label>
+        <%= form.text_field :first_name, placeholder: 'Enter your First name' %>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last Name: </label>
+        <%= form.text_field :last_name, placeholder: 'Enter your Last name' %>
+  </div>
+  <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">E-mail: </label>
+        <%= form.text_field :email, placeholder: 'Enter your E-mail' %>
+  </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password: </label>
+        <%= form.password_field :password , placeholder: 'Enter your Password'%>
+  </div>
+    <div class="mb-3">
+    <%= form.submit "Sign Up",class: "btn btn-primary" %>
+
+  </div>
+
+<% end %>

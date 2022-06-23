@@ -1,0 +1,27 @@
+ <div class="task-container">
+    <li class="heading">
+        <span class="todo-title">
+        <%= title %>
+        </span>
+        <span class="todo-count">
+            <% if todos.count > 0 %>
+                <%= todos.completed.count %> /
+                <%= todos.count %> 
+            <% end %>
+        </span>
+    </li>
+    <% todos.each do |todo| %>
+        <li class="tasks">
+            <%= form_with(url: "todos/#{todo.id}",method: "put",class: "checkbox-form") do%>
+                <input type="checkbox" <%= todo.completed ? "checked" : ""%> name="completed"  onchange="this.form.submit()" id="task-checkbox<%= todo.id %>">
+            <% end %>
+            <label for="task-checkbox<%= todo.id %>">
+                <%= todo.todo_text %>
+            </label>
+            <span class="date"><%= todo.due_date.to_s(:short) %></span>
+            <%= form_with(url: "todos/#{todo.id}", method: "delete" ) do %>
+                <%= image_submit_tag("trash.png") %>
+            <% end %>
+        </li>
+    <% end %>
+</div>
