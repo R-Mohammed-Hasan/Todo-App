@@ -102,7 +102,7 @@ h2 {
 .header {
     position: relative;
     background-color: grey;
-    padding: 30px 40px;
+    padding: 40px;
     color: white;
     text-align: center;
 }
@@ -163,19 +163,31 @@ li {
 
 .heading {
     font-family: monospace;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
-    margin: 2% 0%;
+    margin: 5% 0%;
+    text-align: center;
 }
 
 .tasks {
-    font-size: 17px;
+    font-size: 18px;
     font-family: sans-serif;
-    margin-left: 5%;
+    margin: 1% 1% 1% 7%;
+    padding: 1%;
+    text-align: left;
+    align-items: center;
+}
+
+.tasks:hover .delete-img input {
+    visibility: visible;
 }
 
 input[type="checkbox"] {
     margin: 1%;
+}
+
+.checkbox-form input:checked~.todo-text {
+    text-decoration: line-through;
 }
 
 .tasks img {
@@ -199,12 +211,18 @@ input[type="checkbox"] {
     color: grey;
 }
 
+.all-tasks-container {
+    display: flex;
+    text-align: center;
+}
+
 .task-container {
-    margin-left: 37%;
+    width: 30%;
 }
 
 .checkbox-form {
     display: inline;
+    margin: 1%;
 }
 
 #myDueDate {
@@ -221,8 +239,15 @@ input[type="checkbox"] {
     right: 8%;
 }
 
-.delete-img {
-    width: 10%;
+form {
+    display: inline;
+}
+
+.delete-img input {
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    margin-left: 10%;
 }
 
 .flash-error {

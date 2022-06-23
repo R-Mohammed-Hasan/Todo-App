@@ -13,14 +13,20 @@
     <% todos.each do |todo| %>
         <li class="tasks">
             <%= form_with(url: "todos/#{todo.id}",method: "put",class: "checkbox-form") do%>
-                <input type="checkbox" <%= todo.completed ? "checked" : ""%> name="completed"  onchange="this.form.submit()" id="task-checkbox<%= todo.id %>">
+                <input class="form-check-input" type="checkbox" <%= todo.completed ? "checked" : ""%> name="completed"  onchange="this.form.submit()" id="task-checkbox<%= todo.id %>">
+            <label for="task-checkbox<%= todo.id %>" class="todo-text">
             <% end %>
-            <label for="task-checkbox<%= todo.id %>">
                 <%= todo.todo_text %>
             </label>
-            <span class="date"><%= todo.due_date.to_s(:short) %></span>
+            <span class="date">
+                <% unless todo.due_date == Date.today %> 
+                <%= todo.due_date.to_s(:short)  %> 
+                <% end %>
+            </span>
             <%= form_with(url: "todos/#{todo.id}", method: "delete" ) do %>
-                <%= image_submit_tag("trash.png") %>
+                <span class="delete-img">
+                    <%= image_submit_tag("trash.png") %>
+                </span>
             <% end %>
         </li>
     <% end %>
