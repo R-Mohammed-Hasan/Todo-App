@@ -4,12 +4,6 @@ class TodosController < ApplicationController
   def todo
     @todo = Todo.new
     @todos = current_user.todos
-    todo_of_id
-  end
-
-  def todo_of_id
-    @todo_of_id = (Todo.all.where(id: 5))[0]
-    @todo_of_id
   end
 
   def show

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      redirect_to root_path
+      redirect_to root_path, success: "You have been logged in successfully"
     else
       redirect_to users_login_path, danger: "Invalid credentials..! Please try again"
     end
