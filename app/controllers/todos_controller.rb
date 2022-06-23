@@ -8,10 +8,7 @@ class TodosController < ApplicationController
   end
 
   def todo_of_id
-    puts "=============================================================================================="
     @todo_of_id = (Todo.all.where(id: 5))[0]
-    puts @todo_of_id
-    # puts @todo_of_id.to_s
     @todo_of_id
   end
 

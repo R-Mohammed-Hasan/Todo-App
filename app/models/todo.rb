@@ -39,8 +39,4 @@ class Todo < ApplicationRecord
     puts "Due later"
     puts due_later.showlist
   end
-
-  def to_s
-    return ":id => #{self.id}, :todo_text => #{self.todo_text}, :due_date => #{self.due_date}"
-  end
 end

@@ -2,7 +2,6 @@
 <%# <% stylesheet_link_tag 'todos' %> %>
 <div class="todos">
 <br><br>
-<%= @todo_of_id.to_s %>
 <div id="myDIV" class="header">
   <h2 ><%= @current_user.last_name %>'s To Do List</h2>
   <%= link_to "Sign Out" , users_signout_path, method: 'delete', class: "sign-out btn btn-primary"%>
