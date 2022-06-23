@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the todo application in which each  user can have their own todos and mark it as complete with options showing overdue, due today and due later.
+Here is the heroku link for the Todo Application :
+    https://todoapplication007.herokuapp.com/
+    
