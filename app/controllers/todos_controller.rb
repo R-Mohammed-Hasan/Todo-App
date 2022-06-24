@@ -1,6 +1,4 @@
 class TodosController < ApplicationController
-  skip_before_action :verify_authenticity_token
-
   def todo
     @todo = Todo.new
     @todos = current_user.todos
