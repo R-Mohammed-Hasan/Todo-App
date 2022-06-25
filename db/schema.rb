@@ -12,9 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2022_06_22_071051) do
 
+  create_table "friends", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "first_name", limit: 30
+    t.string "last_name", limit: 30
+    t.string "email", limit: 40
+    t.integer "phone"
+    t.string "twitter", limit: 30
+  end
+
   create_table "todos", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "todo_text", limit: 50
-    t.date "due_date_todo"
+    t.string "todo_text", limit: 30
+    t.date "due_date"
     t.boolean "completed", default: false
     t.bigint "user_id"
   end
@@ -24,9 +33,9 @@ ActiveRecord::Schema.define(version: 2022_06_22_071051) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
   end
 
 end

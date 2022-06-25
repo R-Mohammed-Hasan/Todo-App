@@ -24,9 +24,7 @@
                 <% end %>
             </span>
             <%= form_with(url: "todos/#{todo.id}", method: "delete" ) do %>
-                <span class="delete-img">
-                    <%= image_submit_tag("trash.png") %>
-                </span>
+                    <%= image_submit_tag("trash.png",class: "delete-img", data: { confirm: 'Are you sure?' })  %>
             <% end %>
         </li>
     <% end %>
