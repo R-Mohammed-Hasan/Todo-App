@@ -73,7 +73,7 @@
     /* Style the header */
     .header {
         position: relative;
-        background-color: rgb(31, 221, 129);
+        background-color: rgb(11, 225, 122);
         padding: 40px;
         color: white;
         text-align: center;
@@ -163,10 +163,23 @@
     .date {
         margin-left: 1%;
         font-size: 14px;
-        color: grey;
+        color: rgb(89, 89, 89);
+    }
+    .bg-container {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        z-index: -1;
+        border-top: 4px solid black;
+        top: 30%;
+        left: 0;
+        background: image-url("bg.jpg") no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.7;
     }
     .all-tasks-container {
         display: flex;
+        min-width: 80%;
         text-align: center;
     }
     .task-container {
@@ -195,6 +208,7 @@
         width: 20px;
         height: 20px;
         margin-left: 10%;
+        border-radius: 100%;
     }
     .flash-error {
         font-size: 18px;
