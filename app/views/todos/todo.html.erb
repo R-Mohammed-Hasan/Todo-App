@@ -11,9 +11,9 @@
     <% end %>
   </div>
   <div class="all-tasks-container">
-    <%= render partial: "todo_section",locals: {title: "Overdue",todos: @todos.overdue} %>
-    <%= render partial: "todo_section",locals: {title: "Due Today",todos: @todos.due_today} %>
-    <%= render partial: "todo_section",locals: {title: "Due Later",todos: @todos.due_later} %>
-    </div>
+      <%= render partial: "todo_section",locals: {title: "Overdue",todos: @todos.overdue} %>
+      <%= render partial: "todo_section",locals: {title: "Due Today",todos: @todos.due_today} %>
+      <%= render partial: "todo_section",locals: {title: "Due Later",todos: @todos.due_later} %>
+  </div>
 </div>
 </div>
