@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "96d76b64-a55b-4514-be2b-cc2ab4aa9131",
+		"name": "Rails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/todos?\"todo\"={\"todo_text\"=>\"test\", \"due_date\"=>\"2022-06-22\"}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/todos?\"todo\"={\"todo_text\"=>\"test\", \"due_date\"=>\"2022-06-22\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "\"todo\"",
+							"value": "{\"todo_text\"=>\"test\", \"due_date\"=>\"2022-06-22\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
